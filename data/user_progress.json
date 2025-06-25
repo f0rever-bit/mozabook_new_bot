@@ -5,7 +5,7 @@
         "modules": {
           "module2": {
             "completed": true,
-            "test_score": 60.0
+            "test_score": 20.0
           },
           "module1": {
             "completed": true,
@@ -17,13 +17,22 @@
           },
           "module4": {
             "completed": true,
-            "test_score": 40.0
+            "test_score": 80.0
+          },
+          "module5": {
+            "completed": true,
+            "test_score": 100.0
           }
         },
         "total_modules": 5
       },
       "course2": {
-        "modules": {},
+        "modules": {
+          "module6": {
+            "completed": true,
+            "test_score": 20.0
+          }
+        },
         "total_modules": 5
       }
     }
@@ -35,12 +44,33 @@
           "module1": {
             "completed": true,
             "test_score": 0.0
+          },
+          "module2": {
+            "completed": true,
+            "test_score": 0.0
+          },
+          "module3": {
+            "completed": true,
+            "test_score": 0.0
+          },
+          "module4": {
+            "completed": true,
+            "test_score": 0.0
+          },
+          "module5": {
+            "completed": true,
+            "test_score": 0.0
           }
         },
         "total_modules": 5
       },
       "course2": {
-        "modules": {},
+        "modules": {
+          "module6": {
+            "completed": true,
+            "test_score": 0.0
+          }
+        },
         "total_modules": 5
       }
     }

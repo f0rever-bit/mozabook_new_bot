@@ -6,6 +6,18 @@ course_titles = {
     "course2": "Використання Mozaik у дистанційній освіті",
 }
 
+# Головне меню (українською)
+main_menu_keyboard = ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="📘 Почати/Продовжити навчання")],
+        [KeyboardButton(text="📝 Пройти тестування")],
+        [KeyboardButton(text="❓ Часті питання (FAQ)")],
+        [KeyboardButton(text="📊 Мій прогрес")],
+        [KeyboardButton(text="❗ Технічна підтримка")],
+    ],
+    resize_keyboard=True
+)
+
 courses = {
     "course1": {
         "title": "Основи роботи з mozaBook та mozaWeb",
@@ -168,7 +180,7 @@ main_menu_keyboard = ReplyKeyboardMarkup(
         [KeyboardButton(text="📝 Пройти тестування")],
         [KeyboardButton(text="❓ Часті питання (FAQ)")],
         [KeyboardButton(text="📊 Мій прогрес")],
-        [KeyboardButton(text="⭐ Відгуки"), KeyboardButton(text="❗ Технічна підтримка")],
+        [KeyboardButton(text="❗ Технічна підтримка")],
     ],
     resize_keyboard=True
 )

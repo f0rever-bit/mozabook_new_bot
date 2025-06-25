@@ -7,6 +7,8 @@ import logging
 
 router = Router()
 
+
+# Клавіатура для вибору ролі користувача
 role_keyboard = ReplyKeyboardMarkup(
     keyboard=[
         [KeyboardButton(text="👨‍🏫 Я — вчитель")],
@@ -17,6 +19,7 @@ role_keyboard = ReplyKeyboardMarkup(
 
 @router.message(Command("start"))
 async def cmd_start(message: Message):
+    # Вітальне повідомлення та вибір ролі
     await message.answer(
         "👋 Привіт! Я бот, який допоможе тобі пройти курс \"Основи роботи з mozaBook та mozaWeb\".\n\n"
         "Спочатку обери, хто ти:",
@@ -25,12 +28,14 @@ async def cmd_start(message: Message):
 
 @router.message(lambda msg: msg.text in ["👨‍🏫 Я — вчитель", "🎓 Я — учень"])
 async def set_role(message: Message):
+    # Збереження ролі користувача (учень/вчитель)
     role = "вчитель" if "вчитель" in message.text else "учень"
     # Тут можна зберегти роль у БД
     await message.answer(f"Твоя роль збережена як <b>{role}</b>. Обери дію нижче:", reply_markup=main_menu_keyboard)
 
 @router.message(F.text == "📊 Мій прогрес")
 async def show_progress(message: Message):
+    # Вивід прогресу користувача по всіх курсах та модулях
     user_id = message.from_user.id
     user_data = get_user_progress(user_id)
 
